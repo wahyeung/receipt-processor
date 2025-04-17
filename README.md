@@ -64,3 +64,11 @@ You can find the test cases in tests/scoring.test.js.
 A total of 5 automated unit tests are provided, covering all 7 scoring rules, including edge cases and combined logic scenarios.
 
 🗂 [`postman/receipt-processor-collection.json`](postman/receipt-processor-collection.json)
+
+## ✅ Continuous Integration
+
+This project uses **GitHub Actions** for automated testing.  
+Every push to `main` will automatically run the Jest test suite via CI.
+
+You can see the workflow file in:
+`.github/workflows/node.js.yml`
