@@ -103,3 +103,10 @@ Every push to `main` will automatically run the Jest test suite via CI.
 
 You can see the workflow file in:
 `.github/workflows/node.js.yml`
+
+
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE).
