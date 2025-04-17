@@ -1,0 +1,186 @@
+{
+	"info": {
+		"_postman_id": "05507e79-0734-4bd1-9fdb-56d6817947b9",
+		"name": "Receipt Processor",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38626723"
+	},
+	"item": [
+		{
+			"name": "/receipts/process",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"retailer\": \"HMart\",\n  \"purchaseDate\": \"2022-01-10\",\n  \"purchaseTime\": \"14:30\",\n  \"total\": \"4.25\",\n  \"items\": []\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/receipts/process",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"receipts",
+						"process"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"retailer\": \"Target\",\n  \"purchaseDate\": \"2022-01-01\",\n  \"purchaseTime\": \"13:01\",\n  \"items\": [\n    { \"shortDescription\": \"Pepsi - 12-oz\", \"price\": \"1.25\" },\n    { \"shortDescription\": \"Bread\", \"price\": \"2.00\" }\n  ],\n  \"total\": \"3.25\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/receipts/process?Content-Type=application/json",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"receipts",
+								"process"
+							],
+							"query": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "45"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2d-EmOb6lr2YKtcLgl6E4ePk8dVRDQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 17 Apr 2025 03:42:12 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"58ae4910-508d-4037-af18-dfe5b5ddd079\"\n}"
+				}
+			]
+		},
+		{
+			"name": "receipts/:id/points",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/receipts/2124502f-89b2-47ae-a919-24abd450d35f/points",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"receipts",
+						"2124502f-89b2-47ae-a919-24abd450d35f",
+						"points"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/receipts/2124502f-89b2-47ae-a919-24abd450d35f/points",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"receipts",
+								"2124502f-89b2-47ae-a919-24abd450d35f",
+								"points"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "13"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"d-pVsip4ykBNnAIo+zHwUPtYC8jqs\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 17 Apr 2025 04:21:17 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"points\": 40\n}"
+				}
+			]
+		}
+	]
+}

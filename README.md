@@ -60,3 +60,7 @@ To run tests:
 npm test
 ```
 You can find the test cases in tests/scoring.test.js.
+
+You can also test the API using the provided Postman collection:
+
+🗂 [`postman/receipt-processor-collection.json`](postman/receipt-processor-collection.json)
