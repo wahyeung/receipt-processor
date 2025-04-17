@@ -61,6 +61,6 @@ npm test
 ```
 You can find the test cases in tests/scoring.test.js.
 
-You can also test the API using the provided Postman collection:
+A total of 5 automated unit tests are provided, covering all 7 scoring rules, including edge cases and combined logic scenarios.
 
 🗂 [`postman/receipt-processor-collection.json`](postman/receipt-processor-collection.json)
