@@ -48,7 +48,15 @@ Returns the total points for a submitted receipt.
 6. +6 points if purchase day is odd.
 7. +10 points if purchase time is between 2:00pm and 4:00pm.
 
-## ✅ Example Test
+---
 
-See `examples/simple-receipt.json` and `examples/morning-receipt.json` for sample payloads to test
+## 🧪 Testing
 
+Unit tests are written using [Jest](https://jestjs.io/) to verify the correctness of the scoring logic.
+
+To run tests:
+
+```bash
+npm test
+```
+You can find the test cases in tests/scoring.test.js.
