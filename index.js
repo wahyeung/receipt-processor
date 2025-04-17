@@ -6,6 +6,11 @@ const receiptsRouter = require('./routes/receipts');
 // Middleware to parse JSON bodies
 app.use(express.json());
 
+// Root welcome route 
+app.get('/', (req, res) => {
+  res.send('🎉 Receipt Processor API is live! Visit /receipts to get started.');
+});
+
 // Route all /receipts requests to the receiptsRouter
 app.use('/receipts', receiptsRouter);
 

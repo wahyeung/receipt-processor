@@ -1,8 +1,13 @@
+🔗 **Live API**: [https://receipt-api-6uux.onrender.com](https://receipt-api-6uux.onrender.com)  
+→ Visit root path `/` to verify deployment success.  
+📂 **GitHub Repo**: [https://github.com/wahyeung/receipt-processor](https://github.com/wahyeung/receipt-processor)
+
+> Deployed with Render. Built for the **Fetch Backend Engineer Apprenticeship** challenge.
+
 # Receipt Processor API
 
-This is a lightweight backend service that accepts receipt data, calculates points based on specific rules, and allows querying the point total by receipt ID.
-
-Built for the **Fetch Backend Engineer Apprenticeship** project.
+A lightweight backend service that accepts receipt data, calculates points based on specific rules, and allows querying the total points by receipt ID.  
+Built using **Node.js**, **Express**, and tested with **Jest** & **Supertest**.
 
 ---
 
