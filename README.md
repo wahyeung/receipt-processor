@@ -59,11 +59,37 @@ To run tests:
 ```bash
 npm test
 ```
-You can find the test cases in tests/scoring.test.js.
+You can find test cases in:
+	•	tests/scoring.test.js: unit tests for all scoring rules (1-7), including edge cases
+	•	tests/receipts.test.js: integration test for API input validation
 
-A total of 5 automated unit tests are provided, covering all 7 scoring rules, including edge cases and combined logic scenarios.
+A total of 6 tests are included and run automatically via GitHub Actions.
 
 🗂 [`postman/receipt-processor-collection.json`](postman/receipt-processor-collection.json)
+
+
+## 🔐 Error Handling
+
+If the request body is missing required fields such as `retailer` or `total`,  
+the API will respond with a clear error message and a `400 Bad Request` status.
+
+### Example:
+
+```http
+POST /receipts/process
+Content-Type: application/json
+
+{}
+```
+### Response:
+
+```json
+{
+  "error": "Missing required fields: retailer or total"
+}
+```
+
+This ensures that invalid payloads are gracefully rejected and users receive helpful feedback.
 
 ## ✅ Continuous Integration
 

@@ -8,6 +8,11 @@ const store = require('../store/memoryStore');
 // Accepts a receipt and returns a unique ID after scoring
 router.post('/process', (req, res) => {
   const receipt = req.body;
+
+  if (!receipt || !receipt.retailer || !receipt.total) {
+    return res.status(400).json({ error: 'Missing required fields: retailer or total' });
+  }
+  
   const id = uuidv4();
   const points = scoringService.calculatePoints(receipt);
 
