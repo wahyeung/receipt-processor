@@ -19,6 +19,7 @@ describe('POST /receipts/process - input validation', () => {
       });
 
     expect(response.statusCode).toBe(400);
-    expect(response.body).toHaveProperty('error');
+    expect(response.body).toHaveProperty('errors');
+    expect(Array.isArray(response.body.errors)).toBe(true);
   });
 });
